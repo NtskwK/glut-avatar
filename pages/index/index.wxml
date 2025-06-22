@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="title-bar">
+    <text>桂林理工大学头像框小程序</text>
+  </view>
+
+  <button class="avatar-wrapper" style="width: 512rpx; height: 512rpx; padding: 0; border-radius: 5%; overflow: hidden;" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+    <image class="avatar" src="{{avatar.src}}" mode="aspectFit" style="height: 100%; width: 100%;margin: 0;"></image>
+  </button>
+
+  <view class="frame-list" wx:if="{{avatar.name !== 'default'}}">
+    <view class="frame-item" wx:for="{{frames}}" wx:key="id" bindtap="previewFrame" data-id="{{item.id}}">
+      <canvas type="2d" id="myCanvas-{{item.id}}" style="height: 128rpx; width: 128rpx; "></canvas>
+      <!-- <image src="{{item.src}}" mode="aspectFit"></image> -->
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  <view style="text-align: center; margin-top: 20rpx;">
+    <text>© 2025 Ntkskwk, All rights reserved.</text>
+  </view>
+
+</view>

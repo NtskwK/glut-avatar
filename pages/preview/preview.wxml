@@ -1,0 +1,10 @@
+<!--preview.wxml-->
+<view class="container">
+  <view class="avatar-container" style="margin-top: 200rpx;">
+    <!-- <image class="avatar" src="/images/default-avatar.png" mode="aspectFit"></image>
+    <image class="frame" src="{{frameSrc}}" mode="aspectFit"></image> -->
+    <canvas type="2d" id="new-avatar" style="width: 512rpx; height: 512rpx;"></canvas>
+  </view>
+  <view class="frame-name">{{frameName}}</view>
+  <button class="save-btn" bindtap="saveAvatar">保存头像</button>
+</view>

@@ -1,0 +1,49 @@
+/**index.wxss**/
+.container {
+  background-color: rgb(114, 255, 255);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 10rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+  justify-content: center;
+}
+
+.frame-list {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  white-space: nowrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.frame-item {
+  width: 30%;
+  margin-bottom: 20rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.frame-item image {
+  width: 100%;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.frame-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.title-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50rpx;
+}
